@@ -5,6 +5,8 @@ const yesButton = document.getElementById('yes-button');
 const clickSound = document.getElementById('click-sound');
 const messageParagraph = document.getElementById('message');
 const yippeeSound = new Audio('yippee.mp3');
+//const noButton = document.getElementById('no-button');
+const musicHint = document.getElementById('music-hint');
 
 // Array of random sentences
 const sentenceBank = [
@@ -124,7 +126,7 @@ function moveNoButton() {
 
 // Function to change the "Hello world" text to a random sentence
 function changeTextToRandomSentence() {
-    const helloWorldText = document.querySelector('p');
+    const helloWorldText = document.querySelector('#message');
     if (helloWorldText) {
         const randomSentence = sentenceBank[Math.floor(Math.random() * sentenceBank.length)];
         helloWorldText.textContent = randomSentence;
