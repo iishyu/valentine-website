@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(170, 197, 255), rgb(255, 228, 253));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#message {
+    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-top: 10px; 
+}
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tenor-gif-embed {
+    width: 300px; /* Adjust to your preferred size */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centers the GIF */
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h1 {
+    color: rgb(240, 169, 236);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ecbae4, 0 0 30px #fdb8ff; /* Glow effect */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Button styles */
+.button {
+    background-color: #fdcaff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #cfa1d1;
+}
+
+#music-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 15px;
+    background-color: #dda3df;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999; /* Ensure it stays on top */
+}
+
+#music-toggle:hover {
+    background-color: rgb(137, 108, 141); /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+#music-toggle i {
+    pointer-events: none; /* Keep pointer-events disabled for the icon */
+}
+
+a[href="no.html"] {
+    transition: left 0.3s ease, top 0.3s ease; /* Smooth movement */
+}
+
+
+#music-hint {
+    position: absolute;
+    top: 5px; /* Adjust based on button position */
+    right: 75px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #c5c5ee, #f8d7ff, #ffdcfa);
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    animation: pulse .8s infinite alternate, fadeOut 15s ease-in-out forwards;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Pulse effect to grab attention */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0.9; }
+}
+
+/* Fade out after a few seconds */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Add a little bounce when hovered */
+#music-hint:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
